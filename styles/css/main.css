@@ -35,4 +35,33 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* Primary */
 /* Neutral */
-/* Font *//*# sourceMappingURL=main.css.map */
+/* Font */
+body {
+  background-color: hsl(0, 0%, 94%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+input {
+  width: 100%;
+}
+
+.form_birth {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.birth_date {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}/*# sourceMappingURL=main.css.map */

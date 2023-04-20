@@ -1,4 +1,8 @@
 //CSS reset from Josh Comeau
 @use "scss/reset";
+//base
+@use "scss/base";
 //Variables
 @use "scss/variables";
+//Form
+@use "scss/components/form";

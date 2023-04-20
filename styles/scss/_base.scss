@@ -1,0 +1,20 @@
+@use "variables" as v;
+
+body {
+    background-color: v.$offwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: v.$ff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: v.$white;
+}
+
+input {
+    width: 100%;
+}

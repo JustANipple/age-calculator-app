@@ -1,0 +1,12 @@
+@use "../variables" as v;
+
+.form_birth {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.birth_date {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
