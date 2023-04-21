@@ -49,6 +49,7 @@ input {
     padding-block: .675rem;
     padding-inline: 1rem;
     font-size: 1.25rem;
+    outline: none;
 
     &:hover {
         cursor: pointer;
@@ -131,4 +132,10 @@ input {
 .alert *{
     color: v.$red;
     border-color: v.$red;
+}
+
+.errorPar {
+    font-size: .875rem;
+    font-style: italic;
+    font-weight: v.$fw-reg-i;
 }

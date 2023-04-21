@@ -116,6 +116,7 @@ input {
   padding-block: 0.675rem;
   padding-inline: 1rem;
   font-size: 1.25rem;
+  outline: none;
 }
 input:hover {
   cursor: pointer;
@@ -198,4 +199,10 @@ input:valid {
 .alert * {
   color: hsl(0, 100%, 67%);
   border-color: hsl(0, 100%, 67%);
+}
+
+.errorPar {
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */
