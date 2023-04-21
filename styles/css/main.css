@@ -36,6 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Primary */
 /* Neutral */
 /* Font */
+/* Media query */
 body {
   background-color: hsl(0, 0%, 94%);
   display: flex;
@@ -49,10 +50,19 @@ body {
   flex-direction: column;
   gap: 2.5rem;
   background-color: hsl(0, 0%, 100%);
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+  margin-inline: 1rem;
+  border-radius: 1.5rem;
+  border-bottom-right-radius: 6rem;
+  box-shadow: 0 0 1rem -5rem black;
 }
-
-input {
-  width: 100%;
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 52.625rem;
+    padding: 3.5rem;
+    gap: unset;
+  }
 }
 
 .form_birth {
@@ -60,8 +70,132 @@ input {
   flex-direction: column;
   gap: 2rem;
 }
+@media screen and (min-width: 48rem) {
+  .form_birth {
+    gap: unset;
+  }
+}
+.form_birth * {
+  transition: all 0.5s ease-in-out;
+}
 
 .birth_date {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .birth_date {
+    gap: 2rem;
+  }
+}
+
+#date_day,
+#date_month,
+#date_year {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  text-transform: uppercase;
+  color: hsl(0, 1%, 44%);
+  font-size: 0.75rem;
+  letter-spacing: 0.25rem;
+}
+@media screen and (min-width: 48rem) {
+  label {
+    font-size: 0.875rem;
+  }
+}
+
+input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  padding-block: 0.675rem;
+  padding-inline: 1rem;
+  font-size: 1.25rem;
+}
+input:hover {
+  cursor: pointer;
+}
+input:valid {
+  border-color: hsl(259, 100%, 65%);
+}
+@media screen and (min-width: 48rem) {
+  input {
+    max-width: 9.875rem;
+    font-size: 2rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+.birth_submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 48rem) {
+  .birth_submit {
+    justify-content: flex-end;
+  }
+}
+
+.submit_line {
+  border: 1px solid hsl(0, 0%, 94%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  height: 0;
+}
+
+.submit_btn {
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  z-index: 1;
+  border-radius: 100vw;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+}
+.submit_btn:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 8%);
+}
+@media screen and (min-width: 48rem) {
+  .submit_btn {
+    padding: 1.5rem;
+  }
+}
+
+.btn_img {
+  max-width: 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .btn_img {
+    max-width: unset;
+  }
+}
+
+.age {
+  font-size: 3.35rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.125;
+}
+@media screen and (min-width: 48rem) {
+  .age {
+    font-size: 6.5rem;
+  }
+}
+.age span {
+  color: hsl(259, 100%, 65%);
+}
+
+.alert * {
+  color: hsl(0, 100%, 67%);
+  border-color: hsl(0, 100%, 67%);
 }/*# sourceMappingURL=main.css.map */

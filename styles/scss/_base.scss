@@ -13,8 +13,16 @@ body {
     flex-direction: column;
     gap: 2.5rem;
     background-color: v.$white;
-}
+    padding-block: 3rem;
+    padding-inline: 1.5rem;
+    margin-inline: 1rem;
+    border-radius: 1.5rem;
+    border-bottom-right-radius: 6rem;
+    box-shadow: 0 0 1rem -5rem black;
 
-input {
-    width: 100%;
+    @media screen and (min-width: v.$min-width) {
+        width: 52.625rem;
+        padding: 3.5rem;
+        gap: unset;
+    }
 }

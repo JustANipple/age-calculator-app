@@ -4,9 +4,131 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media screen and (min-width: v.$min-width) {
+        gap: unset;
+    }
+
+    * {
+        transition: all .5s ease-in-out;
+    }
 }
 
 .birth_date {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (min-width: v.$min-width) {
+        gap: 2rem;
+    }
+}
+
+#date_day,
+#date_month,
+#date_year {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+label {
+    text-transform: uppercase;
+    color: v.$smokeygrey;
+    font-size: .75rem;
+    letter-spacing: .25rem;
+
+    @media screen and (min-width: v.$min-width) {
+        font-size: .875rem;
+    }
+}
+
+input {
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid v.$lightgrey;
+    padding-block: .675rem;
+    padding-inline: 1rem;
+    font-size: 1.25rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:valid {
+        border-color: v.$purple;
+    }
+
+    @media screen and (min-width: v.$min-width) {
+        max-width: 9.875rem;
+        font-size: v.$input-fs;
+        padding-inline: 1.5rem;
+    }
+}
+
+.birth_submit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: v.$min-width) {
+        justify-content: flex-end;
+    }
+}
+
+.submit_line {
+    border: 1px solid v.$offwhite;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-block: auto;
+    height: 0;
+}
+
+.submit_btn {
+    background-color: v.$purple;
+    border: none;
+    z-index: 1;
+    border-radius: 100vw;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: v.$offblack;
+    }
+
+    @media screen and (min-width: v.$min-width) {
+        padding: 1.5rem;
+    }
+
+}
+
+.btn_img {
+    max-width: 1.25rem;
+
+    @media screen and (min-width: v.$min-width) {
+        max-width: unset;
+    }
+}
+
+.age {
+    font-size: calc(v.$input-fs * 1.675);
+    font-style: italic;
+    font-weight: v.$fw-extraBold-i;
+    line-height: 1.125;
+
+    @media screen and (min-width: v.$min-width) {
+        font-size: calc(v.$input-fs * 3.25);
+    }
+
+    span {
+        color: v.$purple;
+    }
+}
+
+.alert *{
+    color: v.$red;
+    border-color: v.$red;
 }
