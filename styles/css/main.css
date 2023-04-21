@@ -198,7 +198,7 @@ input:valid {
 
 .alert * {
   color: hsl(0, 100%, 67%);
-  border-color: hsl(0, 100%, 67%);
+  border-color: hsl(0, 100%, 67%) !important;
 }
 
 .errorPar {

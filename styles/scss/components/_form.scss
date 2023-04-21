@@ -131,7 +131,7 @@ input {
 
 .alert *{
     color: v.$red;
-    border-color: v.$red;
+    border-color: v.$red !important;
 }
 
 .errorPar {
