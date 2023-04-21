@@ -20,11 +20,21 @@ submit.addEventListener("click", (event) => {
     const emptyInputs = empty();
     const overflowInputs = overflow();
     if(emptyInputs !== 3) {
-        if(overflowInputs !== 3) {
+        if(overflowInputs !== 3 || overflowInputs !== 4) {
             setAge();
         }
     }
 });
+
+day.addEventListener("input", isValid);
+month.addEventListener("input", isValid);
+year.addEventListener("input", isValid);
+
+function isValid() {
+    if(this.validity.valid) {
+        this.parentElement.setAttribute("class", "");
+    }
+}
 
 function setAge() {
     const birthDate = new Date(year.value, month.value -1, day.value);
@@ -72,7 +82,7 @@ function overflow() {
         errorPars[1].textContent = "Must be a valid month";
         overflow++;
     }
-    if(year.value < currentDate.getUTCFullYear) {
+    if(year.value > currentDate.getUTCFullYear) {
         year.parentElement.setAttribute("class", "alert");
         errorPars[2].textContent = "Must be in the past";
         overflow++;
