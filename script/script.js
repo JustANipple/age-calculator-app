@@ -9,19 +9,15 @@ const ageYears = document.querySelector(".age_years span");
 const errorPars = document.querySelectorAll(".errorPar");
 const form = document.querySelector(".form_birth");
 
-//TO-DO 24-09-1984 = 38 years, 3 months, 26 days
-//TO-DO days must be checked to be right for the month, otherwise show "Must be a valid date"
-//TO-DO days, months and years that overflow the pattern give different errors
-//TO-DO if the field is empty, it shows "this field is required"
-
 submit.addEventListener("click", (event) => {
     event.preventDefault();
-    
+
     const emptyInputs = empty();
     const overflowInputs = overflow();
     if(emptyInputs !== 3) {
-        if(overflowInputs !== 3 || overflowInputs !== 4) {
+        if(overflowInputs === 0) {
             setAge();
+            clearErrors();
         }
     }
 });
@@ -82,10 +78,16 @@ function overflow() {
         errorPars[1].textContent = "Must be a valid month";
         overflow++;
     }
-    if(year.value > currentDate.getUTCFullYear) {
+    if(year.value > currentDate.getUTCFullYear()) {
         year.parentElement.setAttribute("class", "alert");
         errorPars[2].textContent = "Must be in the past";
         overflow++;
     }
     return overflow;
+}
+
+function clearErrors() {
+    for(const error of errorPars) {
+        error.style.display = "none";
+    }
 }
