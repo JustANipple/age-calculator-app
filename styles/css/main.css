@@ -54,7 +54,7 @@ body {
   padding-inline: 1.5rem;
   margin-inline: 1rem;
   border-radius: 1.5rem;
-  border-bottom-right-radius: 6rem;
+  border-bottom-right-radius: 12rem;
   box-shadow: 0 0 1rem -5rem black;
 }
 @media screen and (min-width: 48rem) {
@@ -202,7 +202,12 @@ input:valid {
 }
 
 .errorPar {
-  font-size: 0.875rem;
+  font-size: 0.5rem;
   font-style: italic;
   font-weight: 400;
+}
+@media screen and (min-width: 48rem) {
+  .errorPar {
+    font-size: 0.875rem;
+  }
 }/*# sourceMappingURL=main.css.map */

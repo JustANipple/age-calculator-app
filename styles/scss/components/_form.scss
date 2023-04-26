@@ -135,7 +135,11 @@ input {
 }
 
 .errorPar {
-    font-size: .875rem;
+    font-size: .5rem;
     font-style: italic;
     font-weight: v.$fw-reg-i;
+
+    @media screen and (min-width: v.$min-width) {
+        font-size: .875rem;
+    }
 }

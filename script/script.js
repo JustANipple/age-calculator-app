@@ -32,13 +32,36 @@ function isValid() {
     }
 }
 
-function setAge() {
+async function setAge() {
     const birthDate = new Date(year.value, month.value -1, day.value);
     const age = new Date(currentDate - birthDate);
 
-    ageYears.textContent = age.getUTCFullYear() - 1970;
-    ageMonths.textContent = age.getUTCMonth();
-    ageDays.textContent = age.getUTCDate() -1;
+    ageYears.textContent = "0";
+    ageMonths.textContent = "0";
+    ageDays.textContent = "0";
+
+    const agedYears = age.getUTCFullYear() - 1970;
+    for(let i = 0; i < agedYears; i++) {
+        await animateNum(ageYears);
+    }
+
+    const agedMonths = age.getUTCMonth();
+    for(let i = 0; i < agedMonths; i++) {
+        await animateNum(ageMonths);
+    }
+    
+    const agedDays = age.getUTCDate() -1;
+    for(let i = 0; i < agedDays; i++) {
+        await animateNum(ageDays);
+    }
+}
+
+function animateNum(ageObj) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(ageObj.textContent = parseInt(ageObj.textContent) + 1);
+        }, 20);
+    });
 }
 
 function daysInMonth(year, month) {
