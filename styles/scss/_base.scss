@@ -15,12 +15,13 @@ body {
     background-color: v.$white;
     padding-block: 3rem;
     padding-inline: 1.5rem;
-    margin-inline: 1rem;
+    margin-inline: .75rem;
     border-radius: 1.5rem;
     border-bottom-right-radius: 12rem;
     box-shadow: 0 0 1rem -5rem black;
 
     @media screen and (min-width: v.$min-width) {
+        margin-block: 9.625rem;
         width: 52.625rem;
         padding: 3.5rem;
         gap: unset;
