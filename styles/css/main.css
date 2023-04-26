@@ -65,6 +65,13 @@ body {
   }
 }
 
+.sr-only {
+  position: absolute;
+  color: transparent;
+  width: 0;
+  height: 0;
+}
+
 .form_birth {
   display: flex;
   flex-direction: column;
